@@ -8,8 +8,9 @@
 <script>
    
     const d = new Date();
-    let text = d.toISOString().slice(0,-5);
-    document.write(text+'+00:00');
+    let text = d.toISOString();
+    let x = text.slice(0,-5);
+    document.write(x+'+00:00');
     
 </script>
 </body>

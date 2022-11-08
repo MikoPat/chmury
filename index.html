@@ -7,12 +7,9 @@
 </head>
 
 <script>
-    let dt = new Date();
-    let t = "+00:00";
-    let dat = dt.toISOString();
-    let da = dat.slice(0, -5)
-    let final = da + t;
-    document.write(final);
+    const d = new Date();
+    let text = d.toISOString().substring(0, 19);
+    document.write(text+'+00:00');
 </script>
 
 </body>

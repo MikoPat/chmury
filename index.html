@@ -8,7 +8,7 @@
 <script>
    
     const d = new Date();
-    let text = d.toISOString().substring(0, 19);
+    let text = d.toISOString().slice(0,-5);
     document.write(text+'+00:00');
     
 </script>

@@ -8,21 +8,21 @@ from time import localtime
 
 def home():
     today = datetime.datetime.now()
-    l_t = localtime()
-    t_z = int(l_t.tm_gmtoff/(60*60))
+    lt = localtime()
+    tz = int(lt.tm_gmtoff/(60*60))
 
     iso = today.isoformat()
     dat = iso[:-7]
 
-    if t_z < 0:
+    if tz < 0:
         dat += '-'
     else: 
         dat += '+'
     
-    if t_z < 10:
+    if tz < 10: 
         dat += '0'
 
-    dat += str(t_z) + ':00'
+    dat += str(tz) + ':00'
 
     return '<body>' + dat + '</body>' 
 
